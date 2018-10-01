@@ -45,7 +45,7 @@ class TestMovie(TestCase):
         mocked_get.assert_called()
 
     @TestCase.mock.patch('imdb.imdb_domain.Movie.http_call')
-    def test_availale_on_netflix_mocking_get(self, mocked_http_call):
+    def test_availale_on_netflix_mocking_http_call(self, mocked_http_call):
         dict_movie = {
             'name': 'Wherever you want'
         }
