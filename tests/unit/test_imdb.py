@@ -2,8 +2,6 @@
 
 import unittest, os, mock
 from imdb import imdb_domain
-from mock import patch
-
 
 os.environ.update({
     'APP_SETTINGS': 'app.config.TestingConfig',
