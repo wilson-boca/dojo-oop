@@ -9,6 +9,8 @@ os.environ.update({
     'API_TOKEN': 'AGRIMENSOR-API-TOKEN'
 })
 
+# ASSERTS https://docs.python.org/2.7/library/unittest.html#unittest.TestCase.debug
+
 
 class TestCase(unittest.TestCase):
     mock = mock
