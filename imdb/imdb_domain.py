@@ -1,3 +1,6 @@
+import requests
+
+
 class Movie(object):
 
     @classmethod
@@ -10,6 +13,21 @@ class Movie(object):
         movie._writers = movie_dict.get('writers')
         movie._cast = movie_dict.get('cast')
         return movie
+
+    @classmethod
+    def is_available_on_netflix(cls, movie):
+        print('Call the method that goes to the Internet here...')
+        return cls.http_call(movie)
+
+    @classmethod
+    def http_call(cls, movie):
+        print('Go get {} on netflix'.format(movie))
+        print('a lot of code...')
+        response = requests.get('http://www.google.com')
+        if response.ok:
+            return response.text
+        else:
+            return 'NOT OK MAN'
 
     def __init__(self):
         self._year = None
